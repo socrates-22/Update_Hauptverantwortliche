@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DOCUWARE_TABELLEN_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="test_Hauptverant">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="STICHTAG" Type="datetime" />
+          <Property Name="MANDANT" Type="nvarchar" MaxLength="255" />
+          <Property Name="OBJEKTGES" Type="nvarchar" MaxLength="255" />
+          <Property Name="LIEGNR" Type="nvarchar" MaxLength="255" />
+          <Property Name="LIEGBEZ" Type="nvarchar" MaxLength="255" />
+          <Property Name="Objektschluessel_Liegenschaft" Type="float" />
+          <Property Name="Buchungskreis" Type="nvarchar" MaxLength="255" />
+          <Property Name="Hauptverantwortlich" Type="nvarchar" MaxLength="255" />
+          <Property Name="User_Kategorie" Type="nvarchar" MaxLength="255" />
+          <Property Name="User_Name_Vorname" Type="nvarchar" MaxLength="255" />
+          <Property Name="Zweit_Prüfer_Berechtigt" Type="nvarchar" MaxLength="255" />
+          <Property Name="keys" Type="nchar" MaxLength="10" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DOCUWARE_TABELLEN_ModelStoreContainer">
+          <EntitySet Name="test_Hauptverant" EntityType="Self.test_Hauptverant" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DOCUWARE_TABELLEN_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="test_Hauptverant">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="STICHTAG" Type="DateTime" Precision="3" />
+          <Property Name="MANDANT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OBJEKTGES" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LIEGNR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LIEGBEZ" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Objektschluessel_Liegenschaft" Type="Double" />
+          <Property Name="Buchungskreis" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Hauptverantwortlich" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="User_Kategorie" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="User_Name_Vorname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Zweit_Prüfer_Berechtigt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="keys" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="DOCUWARE_TABELLENEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="test_Hauptverant" EntityType="Self.test_Hauptverant" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DOCUWARE_TABELLEN_ModelStoreContainer" CdmEntityContainer="DOCUWARE_TABELLENEntities">
+          <EntitySetMapping Name="test_Hauptverant">
+            <EntityTypeMapping TypeName="DOCUWARE_TABELLEN_Model.test_Hauptverant">
+              <MappingFragment StoreEntitySet="test_Hauptverant">
+                <ScalarProperty Name="STICHTAG" ColumnName="STICHTAG" />
+                <ScalarProperty Name="MANDANT" ColumnName="MANDANT" />
+                <ScalarProperty Name="OBJEKTGES" ColumnName="OBJEKTGES" />
+                <ScalarProperty Name="LIEGNR" ColumnName="LIEGNR" />
+                <ScalarProperty Name="LIEGBEZ" ColumnName="LIEGBEZ" />
+                <ScalarProperty Name="Objektschluessel_Liegenschaft" ColumnName="Objektschluessel_Liegenschaft" />
+                <ScalarProperty Name="Buchungskreis" ColumnName="Buchungskreis" />
+                <ScalarProperty Name="Hauptverantwortlich" ColumnName="Hauptverantwortlich" />
+                <ScalarProperty Name="User_Kategorie" ColumnName="User_Kategorie" />
+                <ScalarProperty Name="User_Name_Vorname" ColumnName="User_Name_Vorname" />
+                <ScalarProperty Name="Zweit_Prüfer_Berechtigt" ColumnName="Zweit_Prüfer_Berechtigt" />
+                <ScalarProperty Name="keys" ColumnName="keys" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Kein" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
