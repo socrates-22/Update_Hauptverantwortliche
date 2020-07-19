@@ -21,37 +21,37 @@ namespace Update_Hauptverantwortliche
 
                 foreach (var item in GroupResult)
                 {
-                    test_Hauptverant firstItem = item.First();
-                    test_Hauptverant newEntry = new test_Hauptverant(firstItem);
+                    Test_Hauptverant firstItem = item.First();
+                    Test_Hauptverant newEntry = new Test_Hauptverant(firstItem);
 
                     newEntry.Set_COO_AL(newEntry);
                     context.test_Hauptverant.Add(newEntry);
                     
-                    newEntry = new test_Hauptverant(firstItem);
+                    newEntry = new Test_Hauptverant(firstItem);
                     newEntry.Set_COO_GF(newEntry);
                     context.test_Hauptverant.Add(newEntry);
 
-                    newEntry = new test_Hauptverant(firstItem);
+                    newEntry = new Test_Hauptverant(firstItem);
                     newEntry.Set_CEO_AL(newEntry);
                     context.test_Hauptverant.Add(newEntry);
 
-                    newEntry = new test_Hauptverant(firstItem);
+                    newEntry = new Test_Hauptverant(firstItem);
                     newEntry.Set_Leitung_Finanzen_AL(newEntry);
                     context.test_Hauptverant.Add(newEntry);
 
-                    newEntry = new test_Hauptverant(firstItem);
+                    newEntry = new Test_Hauptverant(firstItem);
                     newEntry.Set_Leitung_Mietbetreuung_AL(newEntry);
                     context.test_Hauptverant.Add(newEntry);
 
-                    newEntry = new test_Hauptverant(firstItem);
+                    newEntry = new Test_Hauptverant(firstItem);
                     newEntry.Set_Leitung_Projektsteuerung_AL(newEntry);
                     context.test_Hauptverant.Add(newEntry);
 
-                    newEntry = new test_Hauptverant(firstItem);
+                    newEntry = new Test_Hauptverant(firstItem);
                     newEntry.Set_Leitung_Rechnungswesen_AL(newEntry);
                     context.test_Hauptverant.Add(newEntry);
 
-                    newEntry = new test_Hauptverant(firstItem);
+                    newEntry = new Test_Hauptverant(firstItem);
                     newEntry.Set_Leitung_Recht_AL(newEntry);
                     context.test_Hauptverant.Add(newEntry);
                 }

@@ -25,6 +25,6 @@ namespace Update_Hauptverantwortliche
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<test_Hauptverant> test_Hauptverant { get; set; }
+        public virtual DbSet<Test_Hauptverant> test_Hauptverant { get; set; }
     }
 }

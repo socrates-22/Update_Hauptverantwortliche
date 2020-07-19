@@ -12,7 +12,7 @@ namespace Update_Hauptverantwortliche
     using System;
     using System.Collections.Generic;
     
-    public partial class test_Hauptverant
+    public partial class Test_Hauptverant
     {
         public Nullable<System.DateTime> STICHTAG { get; set; }
         public string MANDANT { get; set; }
